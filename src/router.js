@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from "vue-router";
 import PostList from './components/PostList.vue';
 import HomeContent from './components/HomeContent.vue';
 import PostDetail from './components/PostDetail.vue';
+import AuthorDetail from './components/AuthorDetail.vue';
+import CommentDetail from './components/CommentDetail.vue';
 
 const routes = [
     {
@@ -10,11 +12,21 @@ const routes = [
     },
     {
         path: "/list",
-        component: PostList,
+        component: PostList
     },
     {
         path: "/detail/:id(\\d+)",
-        component: PostDetail
+        component: PostDetail,
+        children: [
+            {
+                path: "author",
+                component: AuthorDetail,
+            },
+            {
+                path: "comment",
+                component: CommentDetail,
+            }
+        ]
     }
 ];
 

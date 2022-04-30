@@ -5,6 +5,8 @@
       {{ 블로그글[$route.params.id].content }}
     </figure>
     <p>{{ 블로그글[$route.params.id].date }}</p>
+    <router-view></router-view>
+    <button @click="$router.go(-1)">돌아가기</button>
   </div>
 </template>
 
