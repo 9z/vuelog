@@ -22,16 +22,20 @@
     </div>
   </nav>
 
-  <div class="container mt-4">
-    <h5>Vue 개발자 블로그</h5>
-    <p>vue 공부중</p>
-  </div>
 
-  <PostList :글="글" v-for="(글, i) in 블로그글" :key="i"/>
+  <router-link to="/">홈페이지</router-link>
+  &nbsp;
+  <router-link to="/list">리스트 페이지</router-link>
+  &nbsp;
+  <router-link to="/detail">상세</router-link>
+
+<div class="mt-4">
+  <router-view :블로그글="블로그글"></router-view>
+</div>
+
 </template>
 
 <script>
-import PostList from "./components/PostList.vue";
 import blog from './assets/blog-posts.js'
 
 export default {
@@ -42,7 +46,7 @@ export default {
     };
   },
   components: {
-    PostList,
+
   },
 };
 </script>
