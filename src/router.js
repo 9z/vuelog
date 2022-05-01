@@ -1,9 +1,9 @@
-import { createWebHistory, createRouter } from "vue-router";
-import PostList from './components/PostList.vue';
-import HomeContent from './components/HomeContent.vue';
-import PostDetail from './components/PostDetail.vue';
+import { createRouter, createWebHashHistory } from "vue-router";
 import AuthorDetail from './components/AuthorDetail.vue';
 import CommentDetail from './components/CommentDetail.vue';
+import HomeContent from './components/HomeContent.vue';
+import PostDetail from './components/PostDetail.vue';
+import PostList from './components/PostList.vue';
 
 const routes = [
     {
@@ -31,7 +31,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 });
 
