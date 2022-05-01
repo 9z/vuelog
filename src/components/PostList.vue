@@ -11,9 +11,6 @@ export default {
     name: 'PostList',
     props: {
         블로그글: Array
-    },
-    mounted() {
-        console.log(this.블로그글);
     }
 }
 </script>
